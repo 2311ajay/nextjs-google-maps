@@ -9,8 +9,9 @@ export default function AutoSearchComponent({ setLocation }) {
    }
 
    const onPlaceChanged = () => {
-      if (autoCom) {
-         const place = autoCom.getPlace();
+      const place = autoCom.getPlace();
+      const geometry = place?.geometry;
+      if (geometry) {
          const lat = place.geometry.location.lat();
          const lon = place.geometry.location.lng();
          setLocation({ lat: place.geometry.location.lat(), lng: place.geometry.location.lng() })
