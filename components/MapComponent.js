@@ -15,9 +15,9 @@ export default function MapComponent({ location, setValue }) {
    }
 
    const getReverseGeocodingData = (lat, lng) => {
-      var latlng = new google.maps.LatLng(lat, lng);
+      const latlng = new google.maps.LatLng(lat, lng);
       // This is making the Geocode request
-      var geocoder = new google.maps.Geocoder();
+      const geocoder = new google.maps.Geocoder();
       geocoder.geocode({ 'latLng': latlng }, (results, status) => {
          if (status !== google.maps.GeocoderStatus.OK) {
             console.log('Error')
