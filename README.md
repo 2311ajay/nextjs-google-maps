@@ -5,9 +5,6 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Dillinger is a cloud-enabled, mobile-ready, offline-storage compatible,
-AngularJS-powered HTML5 Markdown editor.
-
 - Type some Markdown on the left
 - See HTML in the right
 - ✨Magic ✨ -->
@@ -21,7 +18,7 @@ AngularJS-powered HTML5 Markdown editor.
 
 ## Tech
 
-Dillinger uses a number of open source projects to work properly:
+This simple web App uses a number of open source projects to work properly:
 - [NEXT.JS] - Great for its easy to use structure and large template selection!
 - [react-google-maps/api] - Awesome library to handle almost any functionality of Google Maps API!
 - [react-hot-toast] - My favourite way of handling notifications on a webpage!
