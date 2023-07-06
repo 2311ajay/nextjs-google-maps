@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Autocomplete } from '@react-google-maps/api';
 import toast, { Toaster } from 'react-hot-toast';
 
-const notify = () => {
+const notify = () => { // Let's the user know that their selected location is invalid via a Toast
    toast.error('Oops! We can\'t find this place on the map. Try a different keyword.', {id: "123"})
 };
 
@@ -21,7 +21,7 @@ export default function AutoSearchComponent({ setLocation }) {
          const lon = place.geometry.location.lng();
          setLocation({ lat: place.geometry.location.lat(), lng: place.geometry.location.lng() })
          console.log('Get place', lat, lon)
-      } else {
+      } else { // handles the event when the geometry of a location cannot be worked out
          console.log('Autocomplete is not loaded yet!');
          notify();
       }
@@ -33,7 +33,7 @@ export default function AutoSearchComponent({ setLocation }) {
             onPlaceChanged={onPlaceChanged}
             options={{
                types: ["establishment"],
-               // componentRestrictions: { country: "ca" },
+               // componentRestrictions: { country: "ma" }, useful to restrict searches to a list of countries
             }}
          >
             <input className="form-control me-2" type="search" placeholder="Search places" aria-label="Search" />
@@ -42,16 +42,3 @@ export default function AutoSearchComponent({ setLocation }) {
       </div>
    )
 }
-
-{/*<Autocomplete
-            apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
-            style={{ width: "90%" }}
-            onPlaceSelected={(place) => {
-                console.log(place);
-            }}
-            options={{
-                types: ["(regions)"],
-                componentRestrictions: { country: "ca" },
-            }}
-            libraries={["places"]}
-/>*/}

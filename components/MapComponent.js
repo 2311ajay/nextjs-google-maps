@@ -22,7 +22,7 @@ export default function MapComponent({ location, setValue }) {
          if (status !== google.maps.GeocoderStatus.OK) {
             console.log('Error')
          }
-         // This is checking to see if the Geoeode Status is OK before proceeding
+         // This is checking to see if the Geocode Status is OK before proceeding
          if (status == google.maps.GeocoderStatus.OK) {
             let address = (results[0].formatted_address);
             setValue(address)
