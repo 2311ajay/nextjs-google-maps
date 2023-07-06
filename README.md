@@ -28,9 +28,9 @@ This simple web App uses a number of open source projects to work properly:
 
 This project was designed for [Node.js](https://nodejs.org/) v16.13.0+ to run.
 
-> Note: Before running the code, create a file `.env.local`. Copy and paste the contents of the `.env.template` file(you may then delete the template file). Replace the `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` value with your own API key. For more info on how to do that, visit the help page for [Google Maps API](https://developers.google.com/maps/documentation/embed/get-api-key).
+> Note: Before running the code, create a file `.env.local`. Copy and paste the contents of the `.env.template` file(you may then delete the template file). Replace the `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` value with your own API key. For more info on how to obtain a Google Maps API key, visit the help page for [Google Maps API](https://developers.google.com/maps/documentation/embed/get-api-key).
 
-To install the dependencies and start the server, navigate to the root directory of the source code and use the following commands
+To install the dependencies and start the server, navigate to the root directory of the source code and use the following commands.
 
 ```sh
 yarn
