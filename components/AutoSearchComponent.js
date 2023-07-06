@@ -6,7 +6,8 @@ const notify = () => { // Let's the user know that their selected location is in
    toast.error('Oops! We can\'t find this place on the map. Try a different keyword.', {id: "123"})
 };
 
-export default function AutoSearchComponent({ setLocation }) {
+export default function AutoSearchComponent({ setLocation, country }) {
+   // console.log("AutoSearchComponent", countryList);
    const [autoCom, setAutoCom] = useState()
 
    const onLoad = (autocomplete) => {
@@ -33,7 +34,7 @@ export default function AutoSearchComponent({ setLocation }) {
             onPlaceChanged={onPlaceChanged}
             options={{
                types: ["establishment"],
-               // componentRestrictions: { country: "ma" }, useful to restrict searches to a list of countries
+               componentRestrictions: { country: country },
             }}
          >
             <input className="form-control me-2" type="search" placeholder="Search places" aria-label="Search" />
